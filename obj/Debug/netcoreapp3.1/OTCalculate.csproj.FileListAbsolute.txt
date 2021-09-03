@@ -63,7 +63,6 @@ D:\Workspace\3.c#\otcalculate\obj\Debug\netcoreapp3.1\OTCalculate.pdb
 D:\Workspace\3.c#\otcalculate\bin\Debug\netcoreapp3.1\appsettings.Development.json
 D:\Workspace\3.c#\otcalculate\bin\Debug\netcoreapp3.1\appsettings.json
 D:\Workspace\3.c#\otcalculate\bin\Debug\netcoreapp3.1\OTCalculate.exe
-D:\Workspace\3.c#\otcalculate\bin\Debug\netcoreapp3.1\wwwroot\template.xlsx
 D:\Workspace\3.c#\otcalculate\bin\Debug\netcoreapp3.1\EPPlus.dll
 D:\Workspace\3.c#\otcalculate\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.dll
 D:\Workspace\3.c#\otcalculate\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
@@ -96,3 +95,12 @@ D:\Workspace\3.c#\otcalculate\obj\Debug\netcoreapp3.1\OTCalculate.RazorTargetAss
 D:\Workspace\3.c#\otcalculate\obj\Debug\netcoreapp3.1\OTCalculate.RazorTargetAssemblyInfo.cs
 D:\Workspace\3.c#\otcalculate\obj\Debug\netcoreapp3.1\OTCalculate.Views.pdb
 D:\Workspace\3.c#\otcalculate\obj\Debug\netcoreapp3.1\OTCalculate.csproj.CopyComplete
+D:\Workspace\3.c#\otcalculate\bin\Debug\netcoreapp3.1\wwwroot\template1.xlsx
+D:\Workspace\3.c#\otcalculate\bin\Debug\netcoreapp3.1\OTCalculate.deps.json
+D:\Workspace\3.c#\otcalculate\bin\Debug\netcoreapp3.1\OTCalculate.runtimeconfig.json
+D:\Workspace\3.c#\otcalculate\bin\Debug\netcoreapp3.1\OTCalculate.runtimeconfig.dev.json
+D:\Workspace\3.c#\otcalculate\bin\Debug\netcoreapp3.1\OTCalculate.dll
+D:\Workspace\3.c#\otcalculate\bin\Debug\netcoreapp3.1\OTCalculate.pdb
+D:\Workspace\3.c#\otcalculate\bin\Debug\netcoreapp3.1\OTCalculate.Views.dll
+D:\Workspace\3.c#\otcalculate\bin\Debug\netcoreapp3.1\OTCalculate.Views.pdb
+D:\Workspace\3.c#\otcalculate\obj\Debug\netcoreapp3.1\OTCalculate.genruntimeconfig.cache

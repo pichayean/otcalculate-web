@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using otcalculate.Services;
 using OTCalculate.Extension;
 using OTCalculate.Models;
 using OTCalculate.Process;
@@ -17,18 +18,21 @@ namespace OTCalculate.Controllers
     {
         private readonly ILogger<HomeController> _logger;
         private readonly IHostingEnvironment _HostEnvironment;
+        private readonly IDataService _dataService;
 
-        public HomeController(ILogger<HomeController> logger, IHostingEnvironment HostEnvironment)
+        public HomeController(ILogger<HomeController> logger, IHostingEnvironment HostEnvironment, IDataService dataService)
         {
             _logger = logger;
             _HostEnvironment = HostEnvironment;
+            _dataService = dataService;
         }
 
         public IActionResult Index()
         {
-            if (TempData["OT"] != null)
+            var datas = _dataService.GetData();
+            if (!String.IsNullOrEmpty(datas))
             {
-                var data = JsonSerializer.Deserialize<List<Employee>>(TempData["OT"].ToString());
+                var data = JsonSerializer.Deserialize<List<Employee>>(datas);
                 ViewBag.OT = data;
                 ViewBag.OTTOTAL = data.ToTotalOT();
                 Console.WriteLine("Done");
@@ -56,7 +60,9 @@ namespace OTCalculate.Controllers
                 try
                 {
                     var data = LexicalParser.ToEmpolyee(image);
-                    TempData["OT"] = JsonSerializer.Serialize(data);
+                    var d = JsonSerializer.Serialize(data);
+                    // TempData["OT"] = JsonSerializer.Serialize(data);
+                    _dataService.SetData(d);
                 }
                 catch (System.Exception ex)
                 {
