@@ -26,17 +26,21 @@ namespace OTCalculate.Controllers
 
         public IActionResult Index()
         {
+            Console.WriteLine("tOTeee");
             if (TempData["OT"] != null)
             {
+                Console.WriteLine(TempData["OT"].ToString());
                 var data = JsonSerializer.Deserialize<List<Employee>>(TempData["OT"].ToString());
                 ViewBag.OT = data;
                 ViewBag.OTTOTAL = data.ToTotalOT();
+            Console.WriteLine("done");
             }
             else
             {
                 ViewBag.OT = null;//new List<Employee>();
                 ViewBag.OTTOTAL = null;
             }
+            Console.WriteLine("Index");
             return View();
         }
 
