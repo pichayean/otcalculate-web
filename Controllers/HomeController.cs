@@ -72,7 +72,7 @@ namespace OTCalculate.Controllers
                     Console.WriteLine(ex.Message);
                 }
             }
-            return RedirectToAction("Index", "Home");
+            return Redirect("http://ot.msshifu.com/Home/Index");
         }
 
         [HttpGet]
