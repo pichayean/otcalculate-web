@@ -73,6 +73,13 @@ namespace OTCalculate.Controllers
         }
 
         [HttpGet]
+        public ActionResult ClearData()
+        {
+            _dataService.SetData("");
+            return RedirectToAction("Index", "Home");
+        }
+
+        [HttpGet]
         public ActionResult DownloadTemlpate()
         {
             Console.WriteLine("test");
