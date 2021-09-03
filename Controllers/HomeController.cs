@@ -72,7 +72,7 @@ namespace OTCalculate.Controllers
                     Console.WriteLine(ex.Message);
                 }
             }
-            return Redirect("../Home/Index");
+            return RedirectToAction("Home", "Home");
         }
 
         [HttpGet]
@@ -91,5 +91,24 @@ namespace OTCalculate.Controllers
             return File(file, contentType, Path.GetFileName(path));
         }
 
+        public IActionResult Home()
+        {
+            // Console.WriteLine("tOTeee");
+            // if (TempData["OT"] != null)
+            // {
+            //     Console.WriteLine(TempData["OT"].ToString());
+            //     var data = JsonSerializer.Deserialize<List<Employee>>(TempData["OT"].ToString());
+            //     ViewBag.OT = data;
+            //     ViewBag.OTTOTAL = data.ToTotalOT();
+            //     Console.WriteLine("tOTeee");
+            // }
+            // else
+            // {
+            //     ViewBag.OT = null;//new List<Employee>();
+            //     ViewBag.OTTOTAL = null;
+            // }
+            // Console.WriteLine("Index");
+            return View();
+        }
     }
 }
