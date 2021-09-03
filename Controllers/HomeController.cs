@@ -72,7 +72,7 @@ namespace OTCalculate.Controllers
                     Console.WriteLine(ex.Message);
                 }
             }
-            return View();
+            return View("Index");
         }
 
         [HttpGet]
