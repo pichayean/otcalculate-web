@@ -33,7 +33,7 @@ namespace OTCalculate.Controllers
                 var data = JsonSerializer.Deserialize<List<Employee>>(TempData["OT"].ToString());
                 ViewBag.OT = data;
                 ViewBag.OTTOTAL = data.ToTotalOT();
-            Console.WriteLine("tOTeee");
+                Console.WriteLine("tOTeee");
             }
             else
             {
@@ -56,7 +56,7 @@ namespace OTCalculate.Controllers
         }
 
         [HttpPost]
-        public IActionResult Index(IFormFile image)
+        public IActionResult OT(IFormFile image)
         {
             if (image != null)
             {
@@ -72,17 +72,7 @@ namespace OTCalculate.Controllers
                     Console.WriteLine(ex.Message);
                 }
             }
-
-                Console.WriteLine("RedirectToAction");
-                try
-                {
-                    return RedirectToAction("Index", "Home");
-                }
-                catch (System.Exception ex)
-                {
-                    Console.WriteLine(ex.Message);
-                    return RedirectToAction("Index", "Home");
-                }
+            return View();
         }
 
         [HttpGet]
