@@ -74,12 +74,12 @@ namespace OTCalculate.Controllers
         public ActionResult DownloadTemlpate()
         {
             Console.WriteLine("test");
-            string file = @"template.xlsx";
+            string file = @"template1.xlsx";
             string webRootPath = _HostEnvironment.WebRootPath;
             string contentRootPath = _HostEnvironment.ContentRootPath;
 
             string path = "";
-            path = Path.Combine(webRootPath, "template.xlsx");
+            path = Path.Combine(webRootPath, "template1.xlsx");
             //or path = Path.Combine(contentRootPath , "wwwroot" ,"CSS" );
 
             string contentType = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet";
