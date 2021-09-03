@@ -27,10 +27,10 @@ namespace OTCalculate.Controllers
         public IActionResult Index()
         {
             Console.WriteLine("tOTeee");
-            if (TempData["OT"] != null)
+            if (ViewData["OT"] != null)
             {
-                Console.WriteLine(TempData["OT"].ToString());
-                var data = JsonSerializer.Deserialize<List<Employee>>(TempData["OT"].ToString());
+                Console.WriteLine(ViewData["OT"].ToString());
+                var data = JsonSerializer.Deserialize<List<Employee>>(ViewData["OT"].ToString());
                 ViewBag.OT = data;
                 ViewBag.OTTOTAL = data.ToTotalOT();
                 Console.WriteLine("tOTeee");
@@ -65,7 +65,7 @@ namespace OTCalculate.Controllers
                 {
                     var data = LexicalParser.ToEmpolyee(image);
                     Console.WriteLine(JsonSerializer.Serialize(data));
-                    // TempData["OT"] = JsonSerializer.Serialize(data);
+                    ViewData["OT"] = JsonSerializer.Serialize(data);
                 }
                 catch (System.Exception ex)
                 {
