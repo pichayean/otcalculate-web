@@ -45,11 +45,6 @@ namespace OTCalculate.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
-        {
-            return View();
-        }
-
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
@@ -72,7 +67,7 @@ namespace OTCalculate.Controllers
                     Console.WriteLine(ex.Message);
                 }
             }
-            return Redirect("http://ot.msshifu.com/Home/Index");
+            return RedirectToAction("Index", "Home");
         }
 
         [HttpGet]
