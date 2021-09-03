@@ -72,7 +72,7 @@ namespace OTCalculate.Controllers
                     Console.WriteLine(ex.Message);
                 }
             }
-            return RedirectToAction("Home", "Home");
+            return RedirectToAction("Index", "Home");
         }
 
         [HttpGet]
