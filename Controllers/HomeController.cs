@@ -60,6 +60,7 @@ namespace OTCalculate.Controllers
                 try
                 {
                     var data = LexicalParser.ToEmpolyee(image);
+                    Console.WriteLine(JsonSerializer.Serialize(data));
                     TempData["OT"] = JsonSerializer.Serialize(data);
                 }
                 catch (System.Exception ex)
@@ -68,6 +69,7 @@ namespace OTCalculate.Controllers
                 }
             }
 
+                Console.WriteLine("RedirectToAction");
             return RedirectToAction("Index", "Home");
         }
 
