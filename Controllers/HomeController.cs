@@ -26,21 +26,22 @@ namespace OTCalculate.Controllers
 
         public IActionResult Index()
         {
-            Console.WriteLine("tOTeee");
+            Console.WriteLine("income Index");
             if (ViewData["OT"] != null)
             {
+                Console.WriteLine("ViewData");
                 Console.WriteLine(ViewData["OT"].ToString());
                 var data = JsonSerializer.Deserialize<List<Employee>>(ViewData["OT"].ToString());
                 ViewBag.OT = data;
                 ViewBag.OTTOTAL = data.ToTotalOT();
-                Console.WriteLine("tOTeee");
+                Console.WriteLine("Done");
             }
             else
             {
                 ViewBag.OT = null;//new List<Employee>();
                 ViewBag.OTTOTAL = null;
             }
-            Console.WriteLine("Index");
+            Console.WriteLine("View Index");
             return View();
         }
 
@@ -60,11 +61,9 @@ namespace OTCalculate.Controllers
         {
             if (image != null)
             {
-                Console.WriteLine("teee");
                 try
                 {
                     var data = LexicalParser.ToEmpolyee(image);
-                    Console.WriteLine(JsonSerializer.Serialize(data));
                     ViewData["OT"] = JsonSerializer.Serialize(data);
                 }
                 catch (System.Exception ex)
@@ -91,24 +90,5 @@ namespace OTCalculate.Controllers
             return File(file, contentType, Path.GetFileName(path));
         }
 
-        public IActionResult Home()
-        {
-            // Console.WriteLine("tOTeee");
-            // if (TempData["OT"] != null)
-            // {
-            //     Console.WriteLine(TempData["OT"].ToString());
-            //     var data = JsonSerializer.Deserialize<List<Employee>>(TempData["OT"].ToString());
-            //     ViewBag.OT = data;
-            //     ViewBag.OTTOTAL = data.ToTotalOT();
-            //     Console.WriteLine("tOTeee");
-            // }
-            // else
-            // {
-            //     ViewBag.OT = null;//new List<Employee>();
-            //     ViewBag.OTTOTAL = null;
-            // }
-            // Console.WriteLine("Index");
-            return View();
-        }
     }
 }
