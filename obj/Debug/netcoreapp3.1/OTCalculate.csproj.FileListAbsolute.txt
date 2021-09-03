@@ -51,3 +51,12 @@ D:\Workspace\3.c#\demo\OTCalculate\bin\Debug\netcoreapp3.1\runtimes\unix\lib\net
 D:\Workspace\3.c#\demo\OTCalculate\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
 D:\Workspace\3.c#\demo\OTCalculate\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Text.Encoding.CodePages.dll
 D:\Workspace\3.c#\demo\OTCalculate\bin\Debug\netcoreapp3.1\wwwroot\template.xlsx
+D:\Workspace\3.c#\otcalculate\obj\Debug\netcoreapp3.1\OTCalculate.csprojAssemblyReference.cache
+D:\Workspace\3.c#\otcalculate\obj\Debug\netcoreapp3.1\OTCalculate.AssemblyInfoInputs.cache
+D:\Workspace\3.c#\otcalculate\obj\Debug\netcoreapp3.1\OTCalculate.AssemblyInfo.cs
+D:\Workspace\3.c#\otcalculate\obj\Debug\netcoreapp3.1\OTCalculate.csproj.CoreCompileInputs.cache
+D:\Workspace\3.c#\otcalculate\obj\Debug\netcoreapp3.1\OTCalculate.MvcApplicationPartsAssemblyInfo.cache
+D:\Workspace\3.c#\otcalculate\obj\Debug\netcoreapp3.1\OTCalculate.RazorAssemblyInfo.cache
+D:\Workspace\3.c#\otcalculate\obj\Debug\netcoreapp3.1\OTCalculate.RazorAssemblyInfo.cs
+D:\Workspace\3.c#\otcalculate\obj\Debug\netcoreapp3.1\OTCalculate.dll
+D:\Workspace\3.c#\otcalculate\obj\Debug\netcoreapp3.1\OTCalculate.pdb

@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Hosting;
+﻿using Internal;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -56,7 +57,16 @@ namespace OTCalculate.Controllers
         {
             if (image != null)
             {
+                Console.WriteLine("teee");
+                try
+                {
                 var data = LexicalParser.ToEmpolyee(image);
+                }
+                catch (System.Exception ex)
+                {
+                Console.WriteLine(e.Message);
+                     // TODO
+                }
                 TempData["OT"] = JsonSerializer.Serialize(data);
             }
 
@@ -66,6 +76,7 @@ namespace OTCalculate.Controllers
         [HttpGet]
         public ActionResult DownloadTemlpate()
         {
+            Console.WriteLine("test");
             string file = @"template.xlsx";
             string webRootPath = _HostEnvironment.WebRootPath;
             string contentRootPath = _HostEnvironment.ContentRootPath;

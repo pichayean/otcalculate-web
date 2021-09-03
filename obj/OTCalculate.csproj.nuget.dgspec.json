@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Workspace\\3.c#\\demo\\OTCalculate\\OTCalculate.csproj": {}
+    "D:\\Workspace\\3.c#\\otcalculate\\OTCalculate.csproj": {}
   },
   "projects": {
-    "D:\\Workspace\\3.c#\\demo\\OTCalculate\\OTCalculate.csproj": {
+    "D:\\Workspace\\3.c#\\otcalculate\\OTCalculate.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Workspace\\3.c#\\demo\\OTCalculate\\OTCalculate.csproj",
+        "projectUniqueName": "D:\\Workspace\\3.c#\\otcalculate\\OTCalculate.csproj",
         "projectName": "OTCalculate",
-        "projectPath": "D:\\Workspace\\3.c#\\demo\\OTCalculate\\OTCalculate.csproj",
+        "projectPath": "D:\\Workspace\\3.c#\\otcalculate\\OTCalculate.csproj",
         "packagesPath": "C:\\Users\\siam_\\.nuget\\packages\\",
-        "outputPath": "D:\\Workspace\\3.c#\\demo\\OTCalculate\\obj\\",
+        "outputPath": "D:\\Workspace\\3.c#\\otcalculate\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\siam_\\AppData\\Roaming\\NuGet\\NuGet.Config",
