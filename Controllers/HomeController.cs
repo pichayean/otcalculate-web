@@ -26,11 +26,8 @@ namespace OTCalculate.Controllers
 
         public IActionResult Index()
         {
-            Console.WriteLine("income Index");
             if (TempData["OT"] != null)
             {
-                Console.WriteLine("ViewData");
-                Console.WriteLine(TempData["OT"].ToString());
                 var data = JsonSerializer.Deserialize<List<Employee>>(TempData["OT"].ToString());
                 ViewBag.OT = data;
                 ViewBag.OTTOTAL = data.ToTotalOT();
@@ -60,7 +57,6 @@ namespace OTCalculate.Controllers
                 {
                     var data = LexicalParser.ToEmpolyee(image);
                     TempData["OT"] = JsonSerializer.Serialize(data);
-                    Console.WriteLine(TempData["OT"].ToString());
                 }
                 catch (System.Exception ex)
                 {
