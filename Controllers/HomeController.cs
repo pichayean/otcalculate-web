@@ -1,5 +1,4 @@
-﻿using Internal;
-using Microsoft.AspNetCore.Hosting;
+﻿using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -60,14 +59,13 @@ namespace OTCalculate.Controllers
                 Console.WriteLine("teee");
                 try
                 {
-                var data = LexicalParser.ToEmpolyee(image);
+                    var data = LexicalParser.ToEmpolyee(image);
+                    TempData["OT"] = JsonSerializer.Serialize(data);
                 }
                 catch (System.Exception ex)
                 {
-                Console.WriteLine(e.Message);
-                     // TODO
+                    Console.WriteLine(ex.Message);
                 }
-                TempData["OT"] = JsonSerializer.Serialize(data);
             }
 
             return RedirectToAction("Index", "Home");
