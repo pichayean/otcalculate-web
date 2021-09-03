@@ -65,7 +65,7 @@ namespace OTCalculate.Controllers
                 {
                     var data = LexicalParser.ToEmpolyee(image);
                     Console.WriteLine(JsonSerializer.Serialize(data));
-                    TempData["OT"] = JsonSerializer.Serialize(data);
+                    // TempData["OT"] = JsonSerializer.Serialize(data);
                 }
                 catch (System.Exception ex)
                 {
