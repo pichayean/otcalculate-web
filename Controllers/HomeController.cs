@@ -33,7 +33,7 @@ namespace OTCalculate.Controllers
                 var data = JsonSerializer.Deserialize<List<Employee>>(TempData["OT"].ToString());
                 ViewBag.OT = data;
                 ViewBag.OTTOTAL = data.ToTotalOT();
-            Console.WriteLine("done");
+            Console.WriteLine("tOTeee");
             }
             else
             {
@@ -56,7 +56,7 @@ namespace OTCalculate.Controllers
         }
 
         [HttpPost]
-        public IActionResult AddNews(IFormFile image)
+        public IActionResult Index(IFormFile image)
         {
             if (image != null)
             {
@@ -74,7 +74,7 @@ namespace OTCalculate.Controllers
             }
 
                 Console.WriteLine("RedirectToAction");
-            return RedirectToAction("Index");
+            return RedirectToAction("Index", "Home");
         }
 
         [HttpGet]
