@@ -61,6 +61,23 @@ namespace OTCalculate.Process
                                     }
                                 }
                             }
+                            //e.WorkHoursOtherMain = new List<WorkDay>() { new WorkDay { Department = "test", Hour = 98 }, new WorkDay { Department = "test", Hour = 98 }, new WorkDay { Department = "test", Hour = 98 } };
+                            e.WorkHoursOtherMain = (from w in e.WorkHours
+                                                    group w by w.Department into g
+                                                    select new WorkDay { Department = g.Key, 
+                                                                         Hour = e.WorkHours.Where(e => e.Department == g.Key).Sum(e => e.Hour) 
+                                                    }).OrderByDescending(o=>o.Department).ToList();
+
+
+                            var ww = e.WorkHoursOtherMain.FirstOrDefault(h=>h.Department.Equals(e.MainDepartment, StringComparison.OrdinalIgnoreCase));
+                            if (ww != null)
+                            {
+                                e.WorkHoursOTMain = new WorkDay()
+                                {
+                                    Department = e.MainDepartment,
+                                    Hour = ww.Hour - e.DepartmentLimit
+                                };
+                            }
                             els.Add(e);
                         }
                     }

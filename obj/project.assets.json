@@ -4491,7 +4491,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\siam_\\.nuget\\packages\\": {}
+    "C:\\Users\\Demo\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
@@ -4499,11 +4499,11 @@
       "projectUniqueName": "D:\\Workspace\\3.c#\\otcalculate\\OTCalculate.csproj",
       "projectName": "OTCalculate",
       "projectPath": "D:\\Workspace\\3.c#\\otcalculate\\OTCalculate.csproj",
-      "packagesPath": "C:\\Users\\siam_\\.nuget\\packages\\",
+      "packagesPath": "C:\\Users\\Demo\\.nuget\\packages\\",
       "outputPath": "D:\\Workspace\\3.c#\\otcalculate\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\siam_\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Demo\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4556,7 +4556,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }

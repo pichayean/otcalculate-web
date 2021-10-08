@@ -9,9 +9,13 @@ namespace OTCalculate.Models
     {
         public string Name { get; set; }
         public string Type { get; set; }
-        public int DepartmentLimit { get; set; }
+        public int DepartmentLimit { get; set; } //lotter
         public string MainDepartment { get; set; }
+        
         public List<WorkDay> WorkHours { get; set; }
+        public List<WorkDay> WorkHoursOtherMain { get; set; }
+        public WorkDay WorkHoursOTMain { get; set; }
+
         public List<ProductivityOT> GetOT()
         {
             var results = WorkHours.GroupBy(p => p.Department.ToUpper().Trim()).Select(e => e.FirstOrDefault().Department.ToUpper().Trim()).ToList();
